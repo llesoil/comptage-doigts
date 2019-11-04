@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	{% load staticfiles %}
+	<script type="text/javascript" src="{% static 'counter.js' %}"></script> 
+    <meta charset="utf-8"/>
+    <style>
+      body {
+        background: black;
+        color:#CCCCCC; 
+      }
+      div {
+        float: left;
+        border :1px solid #444444;
+        padding:10px;
+        margin: 10px;
+        background:#3B3B3B;
+      }
+    </style>
+  </head>
+  <body>
+	<div>
+      <canvas id="c1" width="240" height="240"></canvas>
+      <canvas id="c2" width="240" height="240"></canvas>
+	  <p></p>
+	  <canvas id="c3" width="240" height="240"></canvas>
+      <canvas id="c4" width="240" height="240"></canvas>
+    </div>
+    <div>
+      <video id="video" autoplay="true"/>
+    </div>
+    <div>
+      <canvas id="c5" width="240" height="240"></canvas>
+      <canvas id="c6" width="240" height="240"></canvas>
+	  <p></p>
+	  <canvas id="c7" width="240" height="240"></canvas>
+      <canvas id="c8" width="240" height="240"></canvas>
+    </div>
+	<div align= 'bottom'>
+		<input type='button' align='center' value='Save background' id='saveBackground' onclick='counter.saveBackground()'></input>
+		<input type='button' align='center' value='SendPicture' id='sendPicture' onclick='counter.sendPicture()'></input>
+	</div>
+  </body>
+</html>
