@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/plain;text/javascript;text/css;charset=utf-8" />
+  	{% load staticfiles %}
+	<script type="text/javascript" src="{% static 'js/picture_one_hand.js' %}"></script>
+	<link type="text/css" rel="stylesheet" href="{% static 'css/picture_one_hand.css' %}" media="all"/>
+  </head>
+<body>
+	<div class="column">
+		<div id="fingers" class="row"></div>
+		<div class="row"><img id="res" src="/static/img/unknown.png"></img></div>
+		<div id="buttons" class="row">
+			<input type='button' align='center' value='Save background' id='saveBackground' onclick='counter.saveBackground()'></input>
+			<input type='button' align='center' value='SendPicture' id='sendPicture' onclick='counter.sendPicture()'></input>
+		</div>
+	</div>
+	<div>
+		<div>
+			<video id="video" autoplay="true"/>
+		</div>
+		<div>
+			<canvas id="c5" width="240" height="240"></canvas>
+			<canvas id="c6" width="240" height="240"></canvas>
+			<p></p>
+			<canvas id="c7" width="240" height="240"></canvas>
+			<img id="c8" src="/static/img/unknown.png"></img>
+		</div>
+	</div>
+ </body>
+</html>

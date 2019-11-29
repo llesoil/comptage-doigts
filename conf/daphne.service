@@ -1,0 +1,12 @@
+[Unit]
+Description=daphne websocket
+After=network.target
+
+[Service]
+User=drone
+WorkingDirectory=/home/drone/comptage-doigts
+ExecStart=/home/drone/comptage-doigts/comptage/bin/daphne -b 0.0.0.0 -p 8001 app.asgi:application
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

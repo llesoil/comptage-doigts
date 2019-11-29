@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <title>Painting</title>
+       <meta http-equiv="Content-Type" content="text/plain;text/javascript;text/css;charset=utf-8" />
+       <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	{% load staticfiles %}
+	<script type="text/javascript" src="{% static 'js/draw_simple.js' %}"></script>
+	<link type="text/css" rel="stylesheet" href="{% static 'css/draw_simple.css' %}" media="all"/>
+   </head>
+   <body>
+	<div class="column">
+		<div id="fingers" class="row">Combien de doigts sont levés sur la main représentée à droite?</div>
+		<div class="row"><img id="res" src="/static/img/unknown.png" width=150 height=150></img></div>
+		<div id="buttons" class="row">
+			<input id="clearCanvasSimple" value="Effacer" type="button" onclick="draw.clear()" width=100></input>
+			<input id="sendFile" value="Envoi" type="button" onclick="draw.sendPicture()" width=100></input>
+		</div>
+	</div>
+        <div>
+		<h1 align = 'center'>Zone de dessin</h1>
+        	<div class="cadre" id="canvasDiv"></div>
+	</div>
+	<div class="bigcolumn">
+		<img id="goal" width=500 height=500></img>
+	</div>
+   </body> 
+</html>

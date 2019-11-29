@@ -1,30 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta http-equiv="Content-Type" content="text/plain;text/javascript;text/css;charset=utf-8" />
   	{% load staticfiles %}
-	<script type="text/javascript" src="{% static 'counter.js' %}"></script> 
-    <meta charset="utf-8"/>
-    <style>
-      body {
-        background: black;
-        color:#CCCCCC; 
-      }
-      div {
-        float: left;
-        border :1px solid #444444;
-        padding:10px;
-        margin: 10px;
-        background:#3B3B3B;
-      }
-    </style>
+	<script type="text/javascript" src="{% static 'js/picture_two_hands.js' %}"></script>
+	<link type="text/css" rel="stylesheet" href="{% static 'css/picture_two_hands.css' %}" media="all"/>
   </head>
   <body>
 	<div>
+	<div class="column">
+		<div id="fingers" class="row"></div>
+		<div class="row"><img id="res" src="/static/img/unknown.png"></img></div>
+		<div id="buttons" class="row">
+			<input type='button' align='center' value='Save background' id='saveBackground' onclick='counter.saveBackground()'></input>
+			<input type='button' align='center' value='SendPicture' id='sendPicture' onclick='counter.sendPicture()'></input>
+		</div>
+	</div>
+    <div>
       <canvas id="c1" width="240" height="240"></canvas>
       <canvas id="c2" width="240" height="240"></canvas>
 	  <p></p>
 	  <canvas id="c3" width="240" height="240"></canvas>
-      <canvas id="c4" width="240" height="240"></canvas>
+      <img id="c4" src="/static/img/unknown.png"></img>
     </div>
     <div>
       <video id="video" autoplay="true"/>
@@ -34,11 +31,6 @@
       <canvas id="c6" width="240" height="240"></canvas>
 	  <p></p>
 	  <canvas id="c7" width="240" height="240"></canvas>
-      <canvas id="c8" width="240" height="240"></canvas>
-    </div>
-	<div align= 'bottom'>
-		<input type='button' align='center' value='Save background' id='saveBackground' onclick='counter.saveBackground()'></input>
-		<input type='button' align='center' value='SendPicture' id='sendPicture' onclick='counter.sendPicture()'></input>
-	</div>
+      <img id="c8" src="/static/img/unknown.png"></img>
   </body>
 </html>

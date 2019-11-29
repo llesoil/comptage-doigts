@@ -8,5 +8,9 @@ def home(request):
         <p>Merci de visiter note page!</p>
     """)
 
+def one_hand(request):
+    return render(request, 'picture/one_hand.html')
+
 def two_hands(request):
     return render(request, 'picture/two_hands.html')
+
