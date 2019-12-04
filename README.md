@@ -135,6 +135,8 @@ See all the consumers.py files to see how the web app uses these models.
 
 ### Speech recognition model
 
+TODO: Develop some fancy model, to classify your speech into seven categories; (0, 1, 2, 3, 4, 5, nothing said or not a number). Or just train a new dictionary on a reduced vocabulary withi numbers.
+
 Input: A spoken number in a sound file (.wav format)
 
 Output: The prediction of the last number you said
@@ -142,8 +144,6 @@ Output: The prediction of the last number you said
 I did not train anything for this model, I just used sphinx, a speech recognition software.
 
 Working with google speech recognition tools gives better results, but you have a limited number of requests you can send in a day (50 requests of 1 minute max), so your software will break at some point.
-
-TODO: Develop some fancy model, to classify your speech into seven categories; (0, 1, 2, 3, 4, 5, nothing said or not a number). Or just train a new dictionary on a reduced vocabulary withi numbers.
 
 Unlike the others models, you will have to install other linux packages to get this model working.
 
@@ -188,6 +188,8 @@ See models/draw for the implementation.
 See data/draw for an example of input.
 
 ### Hand recognition
+
+TODO : Adapt the model for left hands
 
 Input : A picture representing a hand
 
