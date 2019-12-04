@@ -22,8 +22,7 @@ To reproduce this environment, just use the requirements.txt file in the doc/ins
 ### Architecture
 
 A picture is worth a thousand words.
-
-[architecture](https://github.com/llesoil/comptage-doigts/blob/master/doc/architecture.png)
+![architecture](doc/architecture.png)
 
 ### Django
 
