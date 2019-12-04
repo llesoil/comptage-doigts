@@ -2,7 +2,6 @@
 
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-no-red.svg)](https://bitbucket.org/lbesson/ansi-colors)
 
-
 # Context
 
 To write
@@ -210,6 +209,10 @@ In practice, it works better if you raise your hand with your finger pointing th
 
 ![confusion_matrix](doc/confusion_matrix.png)
 
+Training accuracy: 0.96
+
+Test accuracy : 0.98
+
 See models/picture for the implementation.
 
 See data/picture for an example of input.
@@ -217,6 +220,11 @@ See data/picture for an example of input.
 # Contact
 
 You can contact me at luc.lesoil@irisa.fr if you want to discuss about technical details (i.e. web or models).
+
+# Thanks
+
+- To Fanny Ollivier, Yvonnick Noel and François Bodin for letting me work on this project
+- To Laurent Morin for his advices
 
 # References:
 
