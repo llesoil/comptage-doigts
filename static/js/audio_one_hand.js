@@ -52,10 +52,10 @@ document.addEventListener("DOMContentLoaded", () => {
 	const ws_scheme = window.location.protocol == "https:" ? "wss" : "ws";
 	const webSocket = new WebSocket(ws_scheme+ '://' + window.location.host +'/ws/audio/');
 
-	this.webSocket.onmessage = function(e) {
+	webSocket.onmessage = function(e) {
             var data = JSON.parse(e.data);
             var message = data['message'];
-            document.getElementById("c8").src = '/static/img/'+message+'.png';
+            //document.getElementById("res").src = '/static/img/'+message+'.png';
 	    if(message!=="error"){
 		    if(number===parseInt(message)){
 		        document.getElementById("res").src = '/static/img/valid.png'
@@ -65,11 +65,11 @@ document.addEventListener("DOMContentLoaded", () => {
 		    }
 	    }
             else{
-
+		    	document.getElementById("res").src = '/static/img/wrong.png'
 	    }
         };
     
-        this.webSocket.onclose = function(e) {
+        webSocket.onclose = function(e) {
             console.error('Socket closed');
         };
 

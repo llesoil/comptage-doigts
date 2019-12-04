@@ -57,7 +57,6 @@ let draw =  {
 	    	var ws_scheme = window.location.protocol == "https:" ? "wss" : "ws";
 	    	
 		this.webSocket = new WebSocket(ws_scheme+ '://' + window.location.host +'/ws/draw/');
-	
 		console.log(this.webSocket);
 	
 		this.webSocket.onmessage = function(e) {

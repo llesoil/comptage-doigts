@@ -1,4 +1,4 @@
-# Learn how to count to children
+# Comptage-doigts
 
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-no-red.svg)](https://bitbucket.org/lbesson/ansi-colors)
 
@@ -7,7 +7,39 @@
 
 To write
 
+# Use the application
+
+## Launch
+
+Once you're done with the configuration, just run the following command;
+
+<code>gunicorn --certfile=./keys/comptage.crt --keyfile=./keys/comptage.key app.wsgi:application </code>
+
+Without gunicorn, you can test your web application in the manage.py folder with:
+
+<code>python3 manage.py runsslserver</code>
+
+Then go to the following address:
+
+https://your_ip_or_server_name:443
+
+You will see the home webpage.
+
+### Audio
+
+![picture](doc/screenshot_audio.png)
+
+### Draw
+
+![picture](doc/screenshot_draw.png)
+
+### Picture
+
+![picture](doc/screenshot_picture.png)
+
 # Configuration
+
+How to configurate your system before launching the application?
 
 ## General configuration
 
@@ -23,7 +55,7 @@ To reproduce this environment, just use the requirements.txt file in the doc/ins
 
 A picture is worth a thousand words.
 
-![architecture](https://raw.githubusercontent.com/llesoil/comptage-doigts/master/models/doc/architecture.png)
+![architecture](doc/architecture.png)
 
 ### Django
 
@@ -36,7 +68,7 @@ A quick summary :
 - models.py defines your database model, i.e. what type of data you want to store
 - consumers.py defines how you receive and send data through websockets. It's called by Daphne.
 - views.py defines what content your webpage will print
-- settings.py defines the settings you use in your project. To use the code in production, just change debug to False.
+- settings.py defines the settings you use in your project. To use the code in production, just change debug to False
 - the templates folder contains your html pages
 - the static folder contains all your static files called by your html code. Each type of file (img for images, js for javascript and css) has its own sub-folder.
 
@@ -62,6 +94,10 @@ Your can check your nginx configuration file by typing:
 If it fails, see ref 2, and check the logs:
 
 <code>sudo journalctl -xe</code>
+
+Launch nginx with the following command line:
+
+<code>sudo systemctl start nginx</code>
 
 #### Daphne
 
@@ -93,7 +129,21 @@ But it's self-signed, and chrome or firefox will print a warning if you don't ch
 
 ## Models
 
+This part describes how the data analysis is implemented.
+
+See all the consumers.py files to see how the web app uses these models.
+
 ### Speech recognition model
+
+Input: A spoken number in a sound file (.wav format)
+
+Output: The prediction of the last number you said
+
+I did not train anything for this model, I just used sphinx, a speech recognition software.
+
+Working with google speech recognition tools gives better results, but you have a limited number of requests you can send in a day (50 requests of 1 minute max), so your software will break at some point.
+
+TODO: Develop some fancy model, to classify your speech into seven categories; (0, 1, 2, 3, 4, 5, nothing said or not a number). Or just train a new dictionary on a reduced vocabulary withi numbers.
 
 Unlike the others models, you will have to install other linux packages to get this model working.
 
@@ -111,17 +161,60 @@ You should have the 'en-US' installed there by default
 To test it, just run the test_audio.py script in the folder with a .wav file! As a test file for french speech recognition, you can use the number.wav file in the same folder.
 If it worked, you should see some numbers in output!
 
-<span style="color:red">WARNING</span> : if your file has a big size (more than 30 seconds), it can take a while to compute.
+WARNING : if your file has a big size (more than 30 seconds), it can take a while to compute.
 
-### Limitations
+See models/audio for the implementation.
 
-The limitations are especially linked to the machine learning models we use on the server side.
+See data/audio for an example of input.
+
+### Written numbers recognition
+
+Input: a picture with a written number on it
+
+Output: the prediction of the number
+
+I use the mnist dataset and trained a convolutional neural network on the pictures showing numbers between 0 and 5.
+
+To avoid the overfit on these data, we split the dataset into 85% training - 15% test.
+
+On the mnist base, we got a test accuracy of 0.997. It means that if you consider a new dataset of 1000 written numbers, we can expect to have 997 good predictions in average.
+
+But the mnist dataset respects some rules ; the image size is 28 pixels*28 pixels, the number is centered, and 4 pixels are empty on the border of the pictures.
+
+If you want better results, just draw your number on the center of the image, and let some space on the border of the canvas, like they do for mnist dataset.
+
+See models/draw for the implementation.
+
+See data/draw for an example of input.
+
+### Hand recognition
+
+Input : A picture representing a hand
+
+Output : The number of raised fingers in your hand
+
+To the best of my knowledge, there is no big dataset such as mnist dedicated to hand recognition.
+
+I replicate ref 1 for my first model, and add some code (mostly based on ref 9) on top of it to make it work.
+
+Ref 7 propose a nice analytic solution to solve the problem.
+Ref 9 propose an analytic implementation based on edge detection, but it was too sensitive to the finger position (you have to put your inch in the right position to get the good result).
+
+So I build my own dataset and trained a convolutional neural network.
+
+Currently, it contains 30 000 pictures of hands. There were 10 000 pictures at first, but we have to recognize hands in many different positions; for each picture, I added a 90° clockwise and a 90° anticlockwise rotated picture to the dataset. In theory, it should work in every position.
+
+In practice, it works better if you raise your hand with your finger pointing the ceiling.
+
+![confusion_matrix](doc/confusion_matrix.png)
+
+See models/picture for the implementation.
+
+See data/picture for an example of input.
 
 # Contact
 
 You can contact me at luc.lesoil@irisa.fr if you want to discuss about technical details (i.e. web or models).
-
-If you are interested by the results or the general study, ...
 
 # References:
 

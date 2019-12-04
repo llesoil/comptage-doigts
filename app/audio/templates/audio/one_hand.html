@@ -2,7 +2,6 @@
 <html>
   <head>
     <title>Réponse audio</title>
-    
   	{% load staticfiles %}
 	<script type="text/javascript" src="{% static 'js/audio_one_hand.js' %}"></script>
 	<link type="text/css" rel="stylesheet" href="{% static 'css/audio_one_hand.css' %}" media="all"/>
@@ -10,12 +9,12 @@
   <body>
 	<div class="column">
 		<div id="fingers" class="row"></div>
-		<div class="row"><img id="res" src="/static/img/unknown.png"></img></div>
+		<div><img id="res" src="/static/img/unknown.png"></img></div>
 		<div id="buttons" class="row">
-		    <button id="record">Record</button>
+		    <button id="record">Enregistrer</button>
 		    <button id="stop" disabled>Stop</button>
 		    <button id="play" disabled>Play</button>
-		    <button id="send" disabled>Save</button>
+		    <button id="send" disabled>Envoyer</button>
 		</div>
 	</div>
 	<div><img id="goal" width=700 height=700></img></div>

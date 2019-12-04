@@ -17,6 +17,6 @@ from django.urls import path
 from app.draw import views
 
 urlpatterns = [
-    path('accueil', views.home),
+    path('', views.home),
     path('simple', views.simple)
 ]

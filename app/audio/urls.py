@@ -17,6 +17,6 @@ from django.urls import path
 from app.audio import views
 
 urlpatterns = [
-    path('accueil', views.home),
+    path('', views.home),
     path('one_hand', views.one_hand)
 ]

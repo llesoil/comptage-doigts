@@ -1,20 +1,23 @@
 <html>
 	<head>
+		<title>Accueil</title>	
 	 	<meta http-equiv="Content-Type" content="text/plain;text/javascript;text/css;charset=utf-8" />
 	  	{% load staticfiles %}
 		<script type="text/javascript" src="{% static 'js/home.js' %}"></script>
 		<link type="text/css" rel="stylesheet" href="{% static 'css/home.css' %}" media="all"/>
 	</head>
 	<body>
-	Bienvenue sur le site!
-	<p>
-		Montrer mains (webcam) :
-	</p>
-	<p>
-		Reconnaissance vocale :
-	</p>
-	<p>
-		Dessin de chiffre (dessin):
-	</p>	
+		<h2>
+			Bienvenue sur le site!
+			<p>
+				Montrer mains (webcam) : <a href='/picture/one_hand'>Une main</a> ou <a href='/picture/two_hands'>Deux mains</a>
+			</p>
+			<p>
+				Reconnaissance vocale : <a href='/audio/one_hand'>Voix</a>
+			</p>
+			<p>
+				Dessin de chiffre (dessin): <a href='/draw/simple'>Dessin</a>
+			</p>
+		</h2>	
 	</body>
 </html>

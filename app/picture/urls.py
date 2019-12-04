@@ -17,7 +17,7 @@ from django.urls import path
 from app.picture import views
 
 urlpatterns = [
-    path('accueil', views.home),
+    path('', views.home),
     path('two_hands', views.two_hands),
     path('one_hand', views.one_hand)
 ]

@@ -17,7 +17,7 @@ class PictureConsumer(WebsocketConsumer):
         self.accept()
         self.BASE_DIR = os.path.abspath(".")
         tf.keras.backend.clear_session()
-        self.model = load_model(os.path.join(self.BASE_DIR, 'models//picture//finger_low_resolution.h5'))
+        self.model = load_model(os.path.join(self.BASE_DIR, 'models//picture//finger_low_resolution_v3.h5'))
         self.model._make_predict_function()
         self.img_dim = 28
         self.index = 0
