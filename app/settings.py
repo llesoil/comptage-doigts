@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'sslserver',
     'gunicorn',
+    'app',
     'app.picture',
     'app.audio',
     'app.draw',

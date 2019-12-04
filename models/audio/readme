@@ -1,3 +1,0 @@
-To use the french dictionary, just put the fr-FR folder in the pocketsphinx-data library folder (environment/python3.x/lib/site-packages/speech_recognition/pocketsphinx-data,you should have the 'en-US' installed there by default)
-Follow https://doc.ubuntu-fr.org/pocketsphinx to install pocketsphinx
-To test it, just run the test_audio.py script in the folder! If it works you should see some numbers in output! It can take some time to compute all the audio file.

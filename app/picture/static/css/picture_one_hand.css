@@ -11,7 +11,7 @@ background:#3B3B3B;
 }
 .column {
   float: left;
-  width: 50%;
+  width: 18%;
   vertical-align: middle;
 }
 .row:after {
