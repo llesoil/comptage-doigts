@@ -18,7 +18,7 @@ constantly==15.1.0
 cryptography==2.8
 daphne==2.3.0
 dataclasses==0.7
-Django==2.2.7
+Django==2.2.8
 django-channels==0.7.0
 django-sslserver==0.21
 djongo==1.2.36
