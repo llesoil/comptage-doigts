@@ -6,9 +6,9 @@
 
 « Hide your fingers! » That is a sentence children can hear during French math lessons, when performing computation.
 
-In fact, using one’s fingers to represent quantities and to count could be the missing tool to link analogical representations of quantities and symbolic representations of numbers in our brains (Andres, Di Luca & Pesenti, 2008). In the early stages of learning, using one’s fingers when solving additions is positively linked to high computation performance (Jordan, Kaplan, Ramineni & Locuniak, 2008).
+In fact, using one’s fingers to represent quantities and to count could be the missing tool to link analogical representations of quantities and symbolic representations of numbers in our brains (Andres, Di Luca, & Pesenti, 2008). In the early stages of learning, using one’s fingers when solving additions is positively linked to high computation performance (Jordan, Kaplan, Ramineni, & Locuniak, 2008).
 
-Furthermore, studies within the framework of the Triple Code Model (Dehaene, 1992 ; Dehaene & Cohen, 2000) show that children improve their computing abilities using applications aiming at training the shift between the analogical and symbolical representations of numbers (Vilette, Mawart & Rusinek, 2010 ; “La course aux nombres”, “l’attrape-nombres” developed by Unité INSERM-CEA de Neuroimagerie Cognitive).
+Furthermore, studies within the framework of the Triple Code Model (Dehaene, 1992 ; Dehaene & Cohen, 2000) show that children improve their computing abilities using applications aiming at training the shift between the analogical and symbolical representations of numbers (Vilette, Mawart, & Rusinek, 2010 ; “La course aux nombres”, “l’attrape-nombres” developed by Unité INSERM-CEA de Neuroimagerie Cognitive).
 
 Our first hypothesis is that children with accurate finger representations are more able to link finger representations and symbolic representations of numbers than children with poor finger representations. Secondly, tighter is the link between finger representations and symbolic representations of numbers, better are the results when mentally computing additions and substractions.
 
