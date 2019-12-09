@@ -12,7 +12,9 @@ Furthermore, studies within the framework of the Triple Code Model (Dehaene, 199
 
 Our first hypothesis is that children with accurate finger representations are more able to link finger representations and symbolic representations of numbers than children with poor finger representations. Secondly, tighter is the link between finger representations and symbolic representations of numbers, better are the results when mentally computing additions and substractions.
 
-In this context, this original application has two main goals: the former is to assess the accuracy of children finger representations and their ability to shift from finger representations to symbolic representations of numbers and vice versa, and the latter is to train the shift between these different representations of numbers.  
+In this context, this original application has two main goals: 
+* to assess the accuracy of children finger representations and their ability to shift from finger representations to symbolic representations of numbers and vice versa
+* to train the shift between these different representations of numbers.  
 
 This application is designed to be adapted for users with intellectual disabilities, as part of the inclusive school.
 
