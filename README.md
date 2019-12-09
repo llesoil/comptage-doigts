@@ -4,7 +4,20 @@
 
 # Context
 
-To write
+« Hide your fingers! » That is a sentence children can hear during French math lessons, when performing computation.
+
+In fact, using one’s fingers to represent quantities and to count could be the missing tool to link analogical representations of quantities and symbolic representations of numbers in our brains (Andres, Di Luca, & Pesenti, 2008). In the early stages of learning, using one’s fingers when solving additions is positively linked to high computation performance (Jordan, Kaplan, Ramineni, & Locuniak, 2008).
+
+Furthermore, studies within the framework of the Triple Code Model (Dehaene, 1992 ; Dehaene & Cohen, 2000) show that children improve their computing abilities using applications aiming at training the shift between the analogical and symbolical representations of numbers (Vilette, Mawart, & Rusinek, 2010 ; [La course aux nombres](https://www.lacourseauxnombres.com/nr/home.php), [L’attrape-nombres](https://www.attrape-nombres.com/an/home.php) developed by Unité INSERM-CEA de Neuroimagerie Cognitive).
+
+Our first hypothesis is that children with accurate finger representations are more able to link finger representations and symbolic representations of numbers than children with poor finger representations. Secondly, tighter is the link between finger representations and symbolic representations of numbers, better are the results when mentally computing additions and substractions.
+
+In this context, this original application has two main goals: 
+* to assess the accuracy of children finger representations and their ability to shift from finger representations to symbolic representations of numbers and vice versa
+* to train the shift between these different representations of numbers.  
+
+This application is designed to be adapted for users with intellectual disabilities, as part of the inclusive school.
+
 
 # Use the application
 
