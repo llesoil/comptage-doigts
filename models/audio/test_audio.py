@@ -12,8 +12,9 @@ r = sr.Recognizer()
 #    print("Say something!")
 #    audio = r.listen(source)
 
-test_file = sr.AudioFile('number.wav')
-#test_file = sr.AudioFile('2019-11-26T18-02-16.wav')
+#test_file = sr.AudioFile('number.wav')
+#test_file = sr.AudioFile('with_silence.wav')
+test_file = sr.AudioFile('silence_cut.wav')
 
 with test_file as source:
     audio = r.record(source)
